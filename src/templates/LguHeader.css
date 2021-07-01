@@ -1,0 +1,18 @@
+.LguHeader {
+  background-color: #2c3e50;
+  display: flex;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.LguHeader__icon {
+  height: 40px;
+  margin-left: 50px;
+}
+
+.LguHeader__lgu {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+  margin: 0px 5px;
+}

@@ -1,0 +1,128 @@
+/* .footer-container */
+.Footer {
+  margin-bottom: -150px;
+  background-color: #ecf0f1;
+}
+
+/* .divider-root */
+.Footer__divider {
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* .copyright */
+.Footer__copyright {
+  height: 15px;
+  flex-shrink: 0;
+  background-color: #ecf0f1;
+  border-top: 3px solid #2c3e50;
+  padding-top: 5px;
+}
+
+/* .fc-container */
+.Footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* .fc */
+.copyright {
+  margin-top: 0px;
+  color: #0000008a;
+  margin-left: 15px;
+  font-size: 0.9rem;
+}
+
+/* .footer */
+.Footer__information {
+  padding: 24px 0px;
+  max-width: 960px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* footer-grid-container */
+.Footer__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .footer-grid-container div */
+.Footer__grid div {
+  width: 140px;
+  margin-bottom: 22px;
+  margin: 0 auto;
+}
+
+/* footer-grid */
+.Footer__item {
+}
+
+/* footer-header */
+.Footer__header {
+  margin-bottom: 0.35em;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  margin: 0;
+}
+
+/* .footer-grid img */
+.Footer__grid img {
+  width: 120px;
+  margin-right: 12px;
+}
+
+/* .footer-grid ul  */
+.Footer__item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* .footer-grid  li  */
+.Footer__item li {
+  color: #0000008a;
+  padding: 6px 0;
+}
+
+/* .footer-grid  a  */
+.Footer__item a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media screen and (max-width: 692px) {
+  /* .footer-grid-container div */
+  .Footer__grid div {
+    width: 160px;
+  }
+
+  /* .footer-container */
+  .Footer {
+    margin-bottom: -270px;
+  }
+}
+
+@media only screen and (min-device-width: 314px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  /* .footer-container */
+  .Footer {
+    margin-bottom: -270px;
+  }
+}

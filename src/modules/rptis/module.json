@@ -1,0 +1,19 @@
+{
+  "name": "rptis",
+  "module": "filipizen-rptis",
+  "title": "Real Property",
+  "services": [
+    {
+      "module": "rptis",
+      "name": "rptbilling",
+      "title": "Realty Tax Online Billing",
+      "component": "RptBillingController"
+    },
+    {
+      "module": "rptis",
+      "name": "rpttaxclearance",
+      "title": "Online Realty Tax Clearance",
+      "component": "TaxClearanceController"
+    }
+  ]
+}

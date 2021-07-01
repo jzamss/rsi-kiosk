@@ -1,0 +1,19 @@
+{
+  "name": "bpls",
+  "module": "filipizen-bpls",
+  "title": "Business",
+  "services": [
+    {
+      "module": "bpls",
+      "name": "businessbilling",
+      "title": "Business Online Billing",
+      "component": "BplsBillingWebController"
+    },
+    {
+      "module": "bpls",
+      "name": "renewbusiness",
+      "title": "Renew Business Application",
+      "component": "RenewBusinessWebController"
+    }
+  ]
+}

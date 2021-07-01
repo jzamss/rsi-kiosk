@@ -1,0 +1,13 @@
+.LguMasterTemplate {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.LguMasterTemplate__content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: auto;
+  height: 100%;
+}

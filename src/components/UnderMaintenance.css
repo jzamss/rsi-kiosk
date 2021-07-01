@@ -1,0 +1,19 @@
+.UnderMaintenance__maintenance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.UnderMaintenance__info {
+  width: 400px;
+}
+
+.UnderMaintenance__title {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.UnderMaintenance__image {
+  width: 350px;
+}

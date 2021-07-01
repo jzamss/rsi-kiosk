@@ -1,0 +1,45 @@
+.PartnerListScreen {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.PartnerListScreen__lgus {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 180vh;
+  align-items: stretch;
+}
+
+.PartnerLgu {
+  width: 225px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .PartnerListScreen__lgus {
+    height: 200vh;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .PartnerListScreen__lgus {
+    height: 230vh;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .PartnerListScreen__lgus {
+    height: 320vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .PartnerListScreen__lgus {
+    height: 350vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .PartnerListScreen__lgus {
+    height: 100%;
+  }
+}

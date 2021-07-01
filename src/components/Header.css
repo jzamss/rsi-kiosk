@@ -1,0 +1,11 @@
+.Header {
+  height: 40px;
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+}
+
+.Header__icon {
+  /* height: 22px; */
+  margin-left: 50px;
+}
