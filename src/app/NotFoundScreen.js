@@ -8,19 +8,20 @@ import {
   Content,
 } from "rsi-react-components";
 
-import FilipizenIcon from "../icons/FilipizenIcon";
+// import FilipizenIcon from "../icons/FilipizenIcon";
 import FilipizenMasterTemplate from "../templates/FilipizenTemplate";
 
-const HomeScreen = (props) => {
-  const startHandler = () => {
-    props.history.push("/partners");
+const NotFoundScreen = ({history}) => {
+
+  const gotoHome = () => {
+    history.push("/");
   };
 
   return (
     <FilipizenMasterTemplate showHeader={false}>
       <Page>
         <Spacer height={60} />
-        <FilipizenIcon width={200} />
+        {/* <FilipizenIcon width={200} /> */}
         <Spacer height={30} />
         <Content center>
           <Label labelStyle={styles.code}>404</Label>
@@ -33,7 +34,7 @@ const HomeScreen = (props) => {
               style={{ paddingLeft: 50, paddingRight: 50 }}
               caption="Start Here"
               size="large"
-              onClick={startHandler}
+              action={gotoHome}
             />
           </Panel>
         </Content>
@@ -60,4 +61,4 @@ const styles = {
   },
 };
 
-export default HomeScreen;
+export default NotFoundScreen;

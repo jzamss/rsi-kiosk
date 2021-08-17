@@ -1,0 +1,11 @@
+.SplashScreen {
+  height: 100%;
+  width: 50%;
+  margin: auto;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

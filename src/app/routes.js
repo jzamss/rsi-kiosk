@@ -1,21 +1,10 @@
-// import loadable from "@loadable/component";
-
 import HomeScreen from "./HomeScreen";
-import PartnerListScreen from "./PartnerListScreen";
-import PartnerScreen from "./PartnerScreen";
-import PartnerServiceScreen from "./PartnerServiceScreen";
+import ModuleScreen from "./ModuleScreen";
+import ServiceScreen from "./ServiceScreen";
 
 import PaymentSuccess from "./PaymentSuccess";
 import PaymentError from "./PaymentError";
 import NotFoundScreen from "./NotFoundScreen";
-
-// const HomeScreen = loadable(() => import("./app/HomeScreen"))
-// const PartnerListScreen = loadable(() => import("./app/PartnerListScreen"))
-// const PartnerScreen = loadable(() => import("./app/PartnerScreen"))
-// const PartnerServiceScreen = loadable(() => import("./app/PartnerServiceScreen"))
-// const PaymentSuccess = loadable(() => import("./app/PaymentSuccess"))
-// const PaymentError = loadable(() => import("./app/PaymentError"))
-// const NotFoundScreen = loadable(() => import("./app/NotFoundScreen"))
 
 const routes = [
   {
@@ -25,19 +14,16 @@ const routes = [
     component: HomeScreen,
   },
   {
-    name: "partners",
-    path: "/partners",
-    component: PartnerListScreen,
-  },
-  {
-    name: "services",
-    path: "/partner/:partnerId/services",
-    component: PartnerScreen,
+    name: "module",
+    exact: true,
+    path: "/service/:module",
+    component: ModuleScreen,
   },
   {
     name: "service",
-    path: "/partner/:partnerId/:module/:service",
-    component: PartnerServiceScreen,
+    exact: true,
+    path: "/service/:module/:service",
+    component: ServiceScreen,
   },
   {
     name: "success",

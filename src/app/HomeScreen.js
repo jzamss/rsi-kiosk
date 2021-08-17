@@ -1,38 +1,79 @@
-import React from "react";
-import FilipizenLogo from "../assets/filipizen.svg";
-import MasterTemplate from "../templates/MasterTemplate";
+import React, { useState, useEffect } from "react";
+import { Title, Subtitle, Link } from "rsi-react-components";
+import LguMasterTemplate from "../templates/LguMasterTemplate";
+import { getModules } from "../modules";
+import SplashScreen from "./SplashScreen";
+import UnderMaintenance from "../components/UnderMaintenance";
 import "./HomeScreen.css";
 
-const HomeScreen = (props) => {
-  const startHandler = () => {
-    props.history.push("/partners");
-  };
+const ModuleList = (props) => {
+  const { modules, onSelect } = props;
 
   return (
-    <MasterTemplate showHeader={false}>
-      <div className="HomeScreen">
-        <img
-          className="HomeScreen__image"
-          src={FilipizenLogo}
-          alt="filipizen logo"
-        />
-        <div className="HomeScreen__infoContainer">
-          <div className="HomeScreen__information">
-            <label className="HomeScreen__title">
-              Experience ease of doing business with the government
-            </label>
-            <label className="HomeScreen__description">
-              Over 50 local government units participating all over the
-              Philippines.
-            </label>
+    <div className="HomeScreen__modules">
+      {modules.map((module, idx) => {
+        return (
+          <div key={`${module.name}${idx}`} className="HomeScreen__module" onClick={() => onSelect(module)}>
+            <Subtitle>{module.title}</Subtitle>
           </div>
-          <button className="HomeScreen__button" onClick={startHandler}>
-            Start Here
-          </button>
-        </div>
-      </div>
-    </MasterTemplate>
+        );
+      })}
+    </div>
   );
 };
+
+const HomeScreen = ({ history }) => {
+  const [partner, setPartner] = useState();
+  const [modules, setModules] = useState();
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    //TODO: load partner info from server
+    setPartner({
+      id: "00001",
+      name: "CARCAR",
+      group: {name: 'CEBU'},
+      includeservices: '.*'
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!partner) return;
+    setModules(getModules(partner));
+  }, [partner]);
+
+  const onSelectModule = (module) => {
+    history.push({
+      pathname: `/service/${module.name}`,
+      state: { partner, module },
+    });
+  };
+
+  const hideSplash = () => {
+    setShowSplash(false);
+  };
+
+  if (showSplash) {
+    return <SplashScreen onClick={hideSplash} />;
+  }
+
+  if (!partner || !modules) return null;
+
+  return (
+      <LguMasterTemplate partner={partner}>
+        {modules.length > 0 ? (
+          <div className="HomeScreen">
+            <Title>Select Transaction</Title>
+            <ModuleList modules={modules} onSelect={onSelectModule} />
+          </div>
+        ) : (
+          <UnderMaintenance containerStyle={{ marginTop: 40 }} />
+        )}
+      </LguMasterTemplate>
+    
+  );
+};
+
+
 
 export default HomeScreen;

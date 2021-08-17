@@ -16,7 +16,7 @@ import {
   useDataContext
 } from "rsi-react-components";
 
-const InitialInfo = ({ title, partner, moveNextStep, movePrevStep }) => {
+const InitialInfo = ({ title, partner, moveNextStep, movePrevStep, onCancel }) => {
   const [ctx, updateCtx] = useDataContext();
   const [mode, setMode] = useState("initial");
   const [error, setError] = useState();
@@ -94,7 +94,7 @@ const InitialInfo = ({ title, partner, moveNextStep, movePrevStep }) => {
           </Panel>
         </Panel>
         <ActionBar>
-          <BackLink caption="Back" variant="text" action={movePrevStep} />
+          <BackLink caption="Back" variant="text" action={onCancel} />
           <Submit caption="Next" />
         </ActionBar>
       </Card>

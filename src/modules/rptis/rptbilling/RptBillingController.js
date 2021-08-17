@@ -10,7 +10,6 @@ import InitialInfo from "./InitialInfo";
 import OnlineBilling from "./OnlineBilling";
 
 const pages = [
-  { name: "verification", caption: "Verification", Component: EmailVerification,},
   { name: "initial", caption: "Initial Information", Component: InitialInfo },
   { name: "billing", caption: "Billing Information", Component: OnlineBilling },
   { name: "payment", caption: "Payment", Component: EPayment },

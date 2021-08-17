@@ -4,7 +4,7 @@ import { PartnerContext, usePartnerFromLocation } from "rsi-react-filipizen";
 import LguMasterTemplate from "../templates/LguMasterTemplate";
 import { getService, getServiceComponent } from "../modules";
 
-const PartnerServiceScreen = (props) => {
+const ServiceScreen = (props) => {
   const location = useLocation();
   const history = useHistory();
   const [partner, setPartner, isPartnerError] = usePartnerFromLocation(location);
@@ -38,4 +38,4 @@ const PartnerServiceScreen = (props) => {
   );
 };
 
-export default PartnerServiceScreen;
+export default ServiceScreen;
